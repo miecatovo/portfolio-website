@@ -1,0 +1,170 @@
+* {
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box; 
+  font-family: "Hiragino Maru Gothic ProN", "ヒラギノ丸ゴ ProN W4", Meiryo, sans-serif;
+}
+
+header {
+  width: 100%;
+  padding: 15px 0;
+  margin: 0 auto;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 184, 227);
+}
+header .headline{
+  font-size: 32px;
+}
+/* 导航文字hover变色 */
+header a {
+  color: white;
+  text-decoration: none;
+}
+header a:hover {
+  color: #ffe0f2;
+}
+
+.nav-list {
+  text-align: center;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+.nav-list-item {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  font-size: 18px; /* 微调字体大小 */
+}
+/* 导航hover效果 */
+.nav-list-item:hover {
+  color: #ff81c0;;
+  cursor: pointer;
+}
+
+/* 个人信息主体容器 */
+.profile-wrap {
+  width: 90%;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: rgb(255, 218, 240);
+  border-radius: 16px; /* 圆角柔和 */
+}
+/* 个人信息标题 */
+.profile-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #ff81c0;;
+}
+/* 每条个人资料样式 */
+.profile-item {
+  font-size: 18px;
+  line-height: 2.2;
+  padding: 6px 0;
+  border-bottom: 1px solid #ffc6e0;
+}
+.profile-item span {
+  font-weight: bold;
+  color: #ff81c0;;
+  width: 120px;
+  display: inline-block;
+}
+
+.footer-menu{
+  text-align: center;
+  padding: 10px 0;
+  margin: 0 auto;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 218, 240);
+}
+   
+.center{
+  text-align: center;
+  color: black;
+  background-color: rgb(255, 218, 240);
+  padding-bottom: 15px;
+}
+
+footer{
+  background-color: hsl(261, 100%, 87%);
+  padding:20px 20px 30px 20px;
+  margin-top: 50px;
+}
+
+/* ====================== TOPページタイトル====================== */
+.page-title {
+  /* レイアウト調整：上下余白大きくして空間感 */
+  margin: 60px auto 45px;
+  text-align: center;
+  font-size: 38px;
+  letter-spacing: 6px;
+  /* 既存サイト統一の濃ピンク文字色 */
+  color: #ff81c0;
+  /* 相対配置で上下装飾線を重ねる */
+  position: relative;
+  /* 行間広げて優雅に */
+  line-height: 1.8;
+}
+
+/* 左右星装飾 */
+.deco-star {
+  font-size: 46px;
+  color:  #ffb8d8;
+  padding: 0 14px;
+  /* ゆらゆら揺れるアニメ */
+  display: inline-block;
+  animation: starSwing 2.2s ease-in-out infinite alternate;
+}
+
+/* タイトル上部 装飾ライン：下部と同じ色・同じ長さ */
+.page-title::before {
+  content: "";
+  display: block;
+  width: 420px;
+  height: 3px;
+  background-color:  #ffb8d8;
+  margin: 0 auto 18px;
+  border-radius: 99px;
+}
+
+/* タイトル下部 装飾ライン */
+.page-title::after {
+  content: "";
+  display: block;
+  width: 420px;
+  height: 3px;
+  background-color:  #ffb8d8;
+  margin: 18px auto 0;
+  border-radius: 99px;
+}
+
+/* 星揺れアニメーション */
+@keyframes starSwing {
+  0% { transform: rotate(-12deg) translateY(-4px); }
+  100% { transform: rotate(12deg) translateY(4px); }
+}
+
+/* TOP画像レイアウト・デザイン強化（色不変、枠・影・角丸追加） */
+.top-image {
+  width: 88%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  /* 柔らか影で浮遊感 */
+  box-shadow: 0 6px 18px rgba(196, 64, 132, 0.18);
+  /* 画像周り薄ピンク枠 */
+  border: 3px solid rgb(255, 218, 240);
+}
+.top-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* ホバー時ゆっくり拡大エフェクト */
+  transition: transform 0.4s ease;
+}
+.top-image img:hover {
+  transform: scale(1.04);
+}
